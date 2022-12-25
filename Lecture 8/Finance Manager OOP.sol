@@ -143,7 +143,7 @@ contract Teammate is Ownable{
         console.log(msg.value, " Wei sent to contract balance");
     }
     function withdraw(uint256 wdAmount) public OnlyOwner returns(bool){
-        require(wdAmount >= getBalance(), "Not enough funds on the contract.");
+        require(wdAmount <= getBalance(), "Not enough funds on the contract.");
         payable(getOwner()).transfer(wdAmount);
         return true;
     }
