@@ -1,1 +1,1 @@
-Homeworks for Solidity course from Robot_Dreams.
+Solidity course from Robot_Dreams.
