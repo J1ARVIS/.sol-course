@@ -7,3 +7,4 @@
 //Contract deployed!
 //  work with contract in migration.js as before, except functions calls
 //  
+//To migrate to sepolia network: https://trufflesuite.com/docs/truffle/how-to/use-the-truffle-dashboard/
