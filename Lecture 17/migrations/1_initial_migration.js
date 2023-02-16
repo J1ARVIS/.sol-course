@@ -14,3 +14,6 @@ module.exports = async(deployer)=>{
     }
     console.log("-------------------------------------");
 }
+
+// deployed to Sepolia
+//  contract address - 0xE1de2e2f48B9c39adA6957DAF39E7d75aC9D8371
